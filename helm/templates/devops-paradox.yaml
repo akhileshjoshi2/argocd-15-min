@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    path: prod
+    path: helm
     repoURL: https://github.com/akhileshjoshi2/devops-paradox.git
     targetRevision: HEAD
     helm:
