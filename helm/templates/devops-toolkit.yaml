@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: production
+  name: devops-toolkit
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,8 +9,15 @@ spec:
   project: default
   source:
     path: helm
-    repoURL: https://github.com/akhileshjoshi2/argocd-15-min.git
+    repoURL: https://github.com/akhileshjoshi2/devops-toolkit.git
     targetRevision: HEAD
+    helm:
+      values: |
+        image:
+          tag: latest
+        ingress:
+          host: ec2-3-73-224-182.eu-central-1.compute.amazonaws.com
+      version: v3
   destination:
     namespace: production
     server: https://kubernetes.default.svc
