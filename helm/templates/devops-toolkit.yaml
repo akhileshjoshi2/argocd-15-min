@@ -9,14 +9,14 @@ spec:
   project: default
   source:
     path: helm
-    repoURL: https://github.com/Ramnikov/devops-toolkit.git
+    repoURL: https://github.com/akhileshjoshi2/devops-toolkit.git
     targetRevision: HEAD
     helm:
       values: |
         image:
           tag: latest
         ingress:
-          host: devopsi-toolkit.10.0.0.100.xip.io
+          host: devopsi-toolkit.ec2-3-73-224-182.eu-central-1.compute.amazonaws.com
       version: v3
   destination:
     namespace: production
