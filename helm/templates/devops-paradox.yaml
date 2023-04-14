@@ -16,7 +16,7 @@ spec:
         image:
           tag: latest
         ingress:
-          host: devopsi-paradox-ec2-3-73-224-182.eu-central-1.compute.amazonaws.com
+          host: ec2-3-73-224-182.eu-central-1.compute.amazonaws.com
       version: v3
   destination:
     namespace: production
